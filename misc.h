@@ -1,11 +1,11 @@
 /********************************************************************************
-* misc.h: Innehåller diverse bibliotek, definitioner samt enumerationer för
+* misc.h: InnehÃ¥ller diverse bibliotek, definitioner samt enumerationer fÃ¶r
 *         implementering av mikrodatorsystemet.
 ********************************************************************************/
 #ifndef MISC_H_
 #define MISC_H_
 
-/* Klockfrekvens (behövs för fördröjningsrutiner): */
+/* Klockfrekvens (behÃ¶vs fÃ¶r fÃ¶rdrÃ¶jningsrutiner): */
 #define F_CPU 16000000UL /* 16 MHz. */
 
 /* Inkluderingsdirektiv: */
@@ -14,8 +14,9 @@
 #include <util/delay.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdlib.h>
 
-/* Makrodefinitioner för port-nummer på ATmega328P samt motsvarande pin-nummer på Arduino Uno: */
+/* Makrodefinitioner fÃ¶r port-nummer pÃ¥ ATmega328P samt motsvarande pin-nummer pÃ¥ Arduino Uno: */
 #define D0 0 /* PORTD0 / pin 0. */
 #define D1 1 /* PORTD1 / pin 1. */
 #define D2 2 /* PORTD2 / pin 2. */
@@ -47,20 +48,20 @@
 #define A5 19 /* PORTC5 / pin A5. */
 
 /********************************************************************************
-* io_port: Enumeration för val av I/O-port mellan I/O-portar B, C och D.
+* io_port: Enumeration fÃ¶r val av I/O-port mellan I/O-portar B, C och D.
 ********************************************************************************/
 typedef enum io_port
 {
-   IO_PORTB,    /* I/O-port B (pin 8 - 13 på Arduino Uno). */
-   IO_PORTC,    /* I/O-port C (pin A0 - A5 på Arduino Uno). */
-   IO_PORTD,    /* I/O-port D (pin 0 - 7 på Arduino Uno). */
+   IO_PORTB,    /* I/O-port B (pin 8 - 13 pÃ¥ Arduino Uno). */
+   IO_PORTC,    /* I/O-port C (pin A0 - A5 pÃ¥ Arduino Uno). */
+   IO_PORTD,    /* I/O-port D (pin 0 - 7 pÃ¥ Arduino Uno). */
    IO_PORT_NONE /* Icke-specificerad I/O-port. */
 } ioport_t;
 
 /********************************************************************************
-* delay_ms: Genererar fördröjning mätt i millisekunder.
+* delay_ms: Genererar fÃ¶rdrÃ¶jning mÃ¤tt i millisekunder.
 *
-*           - delay_time_ms: Angiven fördröjningstid i millisekunder.
+*           - delay_time_ms: Angiven fÃ¶rdrÃ¶jningstid i millisekunder.
 ********************************************************************************/
 void delay_ms(const uint16_t delay_time_ms);
 
